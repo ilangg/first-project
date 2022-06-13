@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .di1{width: 100px; 
+            height: 100px; 
+            position: absolute;}
+        
+        #b1{background-color: blanchedalmond;
+            left: 10px;
+            top: 10px;
+            z-index: 10;}
+            /*zindex 겹친요소를 밖으로 꺼내기
+              숫자를 무엇을넣든 2가지 z-index있을경우 한쪽수가 더 크면 최상위로올라옴*/
+
+        #b2{background-color: skyblue;
+            left: 50px;
+            top: 50px;
+            z-index: 11}
+
+        #b3{background-color: cadetblue;
+            left: 90px;
+            top: 90px;
+            z-index: 12}
+
+        #total{position: relative;
+               border: 1px solid black;
+               width: 400px; height: 100px;
+               overflow: scroll;}
+
+         /* #total{position: relative;
+         border: 1px solid black;
+         width: 400px; height: 100px;
+         overflow: hidden;} 
+         overflow hidden - 박스외부로 넘치는애는 안보이게*/
+    </style>
+</head>
+<body>
+    <h1>absolute연습 글씨와 z-index 앞</h1>
+    <div id="total">
+    <div id="b1" class="di1"></div>
+    <div id="b2" class="di1"></div>
+    <div id="b3" class="di1"></div>
+    </div>
+    <h1>absolute연습 글씨와 z-index 뒤</h1>
+</body>
+</html>

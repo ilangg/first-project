@@ -1,0 +1,7 @@
+/* # : id */
+/* . : 클래스 */
+h2#blue {color: blue;}
+#red{color: red ;}
+span#yg {color: yellowgreen;}
+p {font-size: 17px;}
+.f123{font-size: 50px;}

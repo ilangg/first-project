@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {display: flex; background-color:brown; border: 1px solid black; margin-bottom: 20px;}
+        .box {width: 200px; background-color: wheat; padding: 5px 20px; margin: 5px;}
+        .p {text-align: center;}
+        /* justify-content : 주축기준으로 항목 간격조정 */
+        #op1 {justify-content: flex-start;} 
+        #op2 {justify-content: end;} 
+        #op3 {justify-content: center;}
+        #op4 {justify-content: space-between;}
+        #op5 {justify-content: space-around;}
+    </style>
+</head>
+<body>
+    <div class="container" id="op1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="op2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="op3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="op4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="op5">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        </div>
+</body>
+</html>

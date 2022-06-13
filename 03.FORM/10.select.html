@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>수강신청</h2>
+    <form method="get" action="?.jsp">
+        <select size="5" multiple>
+            <!-- size 옵션목록에 표시될 갯수 -->
+            <!-- multiple 옵션 다중선택 -->
+            <option value="abc" selected>---- 선택 ----</option>
+            <!-- selected 옵션목록에 첫번째로 보여질 값 -->
+            <option value="archi">건축공학과</option>
+            <option value="archi2">철학과</option>
+            <option value="archi3" >행정학과</option>
+            <option value="archi4">경영학과</option> 
+        </select>
+        <br><br><br>
+
+        <select>
+            <optgroup label="공과대학">
+            <option value="archi">건축공학과</option>
+            <option value="archi3" >행정학과</option>
+            <option value="archi4">경영학과</option> 
+         </optgroup>
+         
+         <optgroup label="인문대학">
+         <option value="archi5">사학과</option>
+         <option value="archi6">철학과</option>
+         <option value="archi7" >어문학과</option>
+         </select><br>
+         </optgroup>
+         <input type="submit" value="제출">
+        </form>
+</body>
+</html>

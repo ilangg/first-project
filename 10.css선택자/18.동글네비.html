@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{list-style: none;}
+        li{display: inline; float:left; border:1px solid black; padding: 10px 30px;}
+        ul li:first-child{border-top-left-radius: 15px; border-bottom-left-radius: 15px;}
+        ul li:last-child{border-top-right-radius: 15px; border-bottom-right-radius: 15px;}
+        ul li:nth-child(odd) {background-color: pink;}
+        ul li:nth-child(2n+1) {color: peru;}
+        ul li:nth-child(even){background-color: skyblue;}
+        ul li:nth-child(2n){color: white;}
+        a{text-decoration: none; color: black;}
+        ul li a:link, ul li a:visited{color: black;}
+        ul li a:hover{color: white;}
+        ul li a:active{color: deeppink;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JQuery</li>
+        <li>java</li>
+        <li>JSP</li>
+    </ul><br>
+    <br>
+
+    <ul>
+        <li><a href="01.iframe.html">Home</a></li>
+        <li><a href="02.하위선택자.html">HTML5</a></li>
+        <li><a href="03.자손선택자.html">CSS3</a></li>
+        <li><a href="04.인접 형제선택자.html">JQuery</a></li>
+        <li><a href="05.형제선택자.html">java</a></li>
+        <li><a href="06.속성선택자.html">JSP</a></li>
+    </ul>
+</body>
+</html>

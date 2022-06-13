@@ -1,0 +1,15 @@
+body{width: 800px;
+    margin: 0 auto;
+    background-color: rgb(250, 234, 173);}
+.di1{background-color: deepskyblue;}
+li{display: inline-block;
+    border: 1px solid black;
+    margin: 10px 20px;
+    list-style: none;
+    padding: 10px 20px;}
+.cl1{border-radius: 5px;
+    width: 500;
+    border: 1.5px solid blueviolet;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 8px;}

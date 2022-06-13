@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: rgba(216, 191, 216, 0.442);}
+        input:disabled{background-color: skyblue; border: 1px solid black;}
+        input:checked + span{color: red;}
+        input[type=radio]+span{margin-right: 25px;}
+    </style>
+</head>
+<body>
+    <form method="get" action=".jsp">
+        <fieldset>
+            <legend>사용자 정보</legend>
+            이름: <input disabled>
+            <!-- 입력 불허 -->
+        </fieldset>
+        <fieldset>
+            <legend>신청과목</legend>
+            <p>이 달에 신청할 과목을 선택하세요</p>
+            <input type="radio" name="subject" value="speaking"><span>회화</span>
+            <input type="radio" name="subject" value="grammar"><span>문법</span>
+            <input type="radio" name="subject" value="writing"><span>작문</span>
+        </fieldset>
+    </form>
+</body>
+</html>

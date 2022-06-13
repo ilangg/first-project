@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* box-shadow 외곽그림자 */
+        div{width: 120px;
+            height: 120px;
+            border: 3px solid rgb(72, 163, 115);
+            margin: 20px;}
+
+        .round1{border-top-left-radius: 30px 10px;
+                box-shadow: 2px 2px 2px 5px black}
+        .round2{border-top-left-radius: 40% 20%;
+                box-shadow: 2px -2px 5px 3px yellow;}
+
+        .round4{border-radius: 0px 0px 10px;}
+        .round5{border-radius: 50% 30%;}
+        .rimg{background-image: url(img/3.jpg);
+              border-radius: 20px;
+              background-position: center;
+              background-size: cover;}
+    </style>
+</head>
+<body>
+    <div class="round1"></div>
+    <div class="round2"></div>
+    <div class="round3"></div>
+    <div class="round4"></div>
+    <div class="round5"></div>
+    <div class="rimg"></div>
+</body>
+</html>

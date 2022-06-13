@@ -1,0 +1,577 @@
+TEXT
+
+P 살짝 떨어진 문단
+blockquote 통째로 들여쓰기
+pre 쓴 그대로 표시
+strong & b 굵은 폰트
+em & i 이탤릭체
+q 따옴표
+mark 형광펜
+ruby-rt 글자위로 주석처리
+ul-li 순서 없는 목록 
+ul type = circle / square / none
+ol-li 순서 있는 목록
+ol type = A / a / i / I
+dt-dd
+dt 제목 & dd 들여쓰기
+table 표
+table border 표 테두리 굵기
+caption : 표 중앙에 오는 표제목 (밑에써도 맨위에 표시됨)
+tr-td 행/열
+colgroup : 열을 그룹화, 한 열은 col로 사용
+th 굵은글씨 (제목은 글자 중간정렬이 기본값)
+<th colspan="5">합계 7,000</th>
+5칸차지하는 행병합
+clospan 행병합
+rowspan 열병합
+&ensp; 1칸띄기
+&emsp; 2칸띄기
+span 글씨가 들어가는만큼 자리차지
+div 한줄 자리차지(가로폭 조정x)
+! + enter 자동 불러오기
+ctrl + s 저장
+alt + b html 실행
+Ctrl + H 현재 페이지 문자열 수정
+ctrl + \  화면 분할
+
+
+
+
+
+IMAGE
+
+
+이미지 삽입
+<img src="img/다운로드.png" alt="보노보노">
+해당폴더내부 img폴더 생성, 이미지파일명, alt: 이미지가 표시안될때 나타낼 텍스트
+
+figure 이미지, 영상 등 업로드시 사용
+figcaption 이미지 설명을 넣을때 사용
+
+링크삽입
+<a href="http://google.com" target="_blank">구글</a>
+_blank : 새창으로 연결
+
+#anker 원하는 위치로 이동 (body문단에 기재) 
+<li><a href="#anker1">소개</a></li>
+<h4 id="anker1">CSS 소개</h4>
+
+
+이미지로 링크연결 (이미지맵)
+이미지 1개에 부위로 쪼개서 개별 링크연결 (좌표 설정) - 지도같은 복잡한이미지에 사용
+www.image-map.net
+
+2가지 방법
+<a href="https://blog.naver.com/bluenight_525/221946809327"><img src="img/다운로드.png" alt="열받는 보노보노짤"></a><br><br>
+
+<img src="img/탱글.jpg" alt="탱글" usemap="#복숭아">
+<map name="복숭아">
+<area target="_blank" alt="탱" title="탱글" href="http://www.naver.com" coords="7,6,300,580" shape="rect">
+<area target="_blank" alt="글"  href="http://www.google.com" coords="301,10,616,579" shape="0">
+</map>
+
+※usemap="이름"과 map name="이름"을 통일
+
+음원, 비디오파일 재생
+해당파일이 vscode 같은폴더내에 저장되있어야함
+<audio src="audio/Kalimba.mp3" controls></audio>
+controls 재생바 생성
+
+<video src="audio/Wildlife.mp4" autoplay controls width="500" height="300"></video>
+autoplay 자동재생
+width/height 화면사이즈 조정
+
+
+
+
+
+FORM
+
+input type=" " 
+속성 text / password / search / email / color / radio / checkbox
+
+radio 1개 체크, 여러개넣을때 name값 통일하기
+<input type="radio" name="woman" value="woman"> 여자
+<input type="radio" name="woman" value="woman2"> 남자<p></p>
+
+checkbox 다중 체크, 여러개넣을때 value값 통일하기
+<input type="checkbox" value="hobby"> 독서
+<input type="checkbox" value="hobby"> 게임
+
+form 폼내용 웹전송
+label 입력칸 생성
+autofocus 새창오픈시 어느칸에 초점맞춰 입력칸이 생길지 지정
+
+유저 편의성을위한 텍스트 메소드 (빈칸 자동클릭)
+    <form method="get" action="???.jsp">
+        <label for="name"> 이름 : </label>
+        <input type="text" id="name" value="필수입력"><br>
+        <label for="add"> 주소 : </label> 
+        <input type="text" id="add" size="50"><br>
+        <label for="add"> 주민번호 : </label> 
+        <input type="text" id="info" maxlength="14">
+    </form>
+
+password는 value 속성이없음
+<form method="get" action="???.jps">
+    <label for="userid"> id : </label>
+    <input type="text" id="userid" autofocus><br>
+    <label for="userpw"> pw : </label>
+    <input type="password" id="userpw"> 
+    </form>
+→ id칸 자동커서, 비밀번호 입력값 별표 표시됨
+
+
+회원가입 폼 생성 03.FORM > 03.search.html 참고
+
+fieldset 테두리처리
+<input type="submit" value="가입하기" style="width: 580px;">
+input type="submit" 전송버튼 생성, value 전송칸 이름변경
+
+제출버튼
+input type="submit"
+
+초기화버튼
+input type="reset"
+
+legend 작은 테두리 제목
+
+게이지 업다운 조절 
+주문 개수 : <input type="number" min="1" max="5" value="1" step="2"><br>
+step 2씩증가
+
+조절되는 게이지
+단계(가,양,미,우,수) : <input type="range" min="1" max="5" value="1"><br>
+range 범위
+
+progress 조절안되는 게이지
+10초남음 <progress value="50" max="60"></progress><br><br>
+진행률 30% <progress value="30" max="100"></progress>
+
+점수 업앤다운
+점수 : <input type="number" min="0" max="100" step="10">
+
+이전 날짜 선택불가한 달력 생성
+<form>
+    <h3>조회기간 선택</h3>
+    <input type="date"> &ensp; ~ &ensp; <input type="date"><br>
+    <!-- 일정기간 이전값 선택불가한 코드 -->
+    <input type="date" min="2022-05-10"> &ensp; ~ &ensp; <input type="date" max="2022-05-31">
+</form>
+
+새창오픈 윈도우코드 
+onclick="window.open()" 
+
+옵션박스 노출갯수 지정
+<select size="5" multiple>
+size 옵션목록에 표시될 갯수
+ multiple 옵션 다중선택
+
+<option value="abc" selected>---- 선택 ----</option>
+selected 옵션목록에 첫번째로 보여질 값
+
+옵션그룹명
+<optgroup label="인문대학">
+
+옵션박스 텍스트 연결
+<h3>관심분야</h3>
+<form method="get" action="?.jsp">
+<input type="text" list="choice">
+★list와 datalist를 id로 연결★
+<datalist id="choice">
+<option value="grammar">문법</option>
+<option value="voca">어휘</option>
+<option value="speaking">회화</option>
+<option value="listening">리스닝</option>
+<option value="news">뉴스청취</option>
+</datalist><p></p>
+<input type="submit" value="제출">
+</form>
+
+게시판 내 텍스트 입력
+<form>
+<textarea cols="80" rows="10"></textarea>
+</form>
+
+
+
+
+
+FONT
+
+
+구글폰트 적용
++Select this style
+import 주소 복붙 (*style 최상단 기재)
+CSS rules to specify families 해당폰트명 복붙
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic&family=Nanum+Pen+Script&family=Yeon+Sung&display=swap');
+h2{font-family: 휴먼옛체, 돋움, 굴림;}
+
+em : 대문자M자 기준으로 배수 글자
+font-weight 400이하 크기는 다 똑같음
+
+line-height 행간격조정
+px / % / em 
+
+대문자로
+text-transform: uppercase;
+
+첫글자만 대문자로
+text-transform: capitalize;}
+
+소문자로
+text-transform: lowercase;}
+
+블릿기호 삭제
+list-style-type: none;
+
+레트로ver.
+<style>
+{font-family: Arial, Helvetica, sans-serif;}
+{color: orange; text-shadow: 3px 3px;}
+</style>
+
+배경색
+background-color
+
+글자 간격
+letter-spacing
+
+단어 간격
+word-spacing 
+
+글자 그림자
+text-shadow
+{text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, 
+-4px -15px 11px #f80, 3px -19px 18px #f20;}
+
+글자 정렬
+<style>
+{text-align: right;}
+{text-align: center;}
+{text-align: left;}
+</style>
+
+들여쓰기
+{text-indent: 20px;}
+{text-indent: 10%;}
+
+마우스호버
+p:hover{overflow: visible;}
+★p 예시 문단
+
+마우스호버 전 내용 가려짐
+overflow: hidden
+
+마우스호버 전 스크롤상태
+overflow: scroll
+
+마우스호버 전 내용여부
+text-overflow
+
+네모 블릿
+{list-style-type: square;}
+
+블릿 목록
+square / none / circle / lower-alpha / georgian
+
+블릿기호 이미지파일
+l{list-style-image: url(img/원형아이콘.jpg)}
+
+블릿기호 들어쓰기, 내어쓰기
+{list-style-position: inside;}
+
+
+
+
+
+COLOR
+
+
+초콜렛
+body{background-color: rgb(164, 154, 138);}
+div{background-color: wheat; padding: 8px;
+border: 5px dotted black;}
+p{line-height: 1.5em;}
+
+점선처리
+border: 5px dotted black;
+
+문단 세로폭
+line-height
+
+점선이 박스 벗어나서
+{background-clip: padding-box;}
+
+글 내용만 배경색 감싸기
+{background-clip: content-box;}
+
+배경이미지 반복
+body{background-image: url(img/베라.jpeg);
+
+x축으로 이미지 반복
+background-repeat: repeat-x;
+
+박스안에 이미지 영역
+<style>
+        div {width: 100px; height: 100px; background-image: url(img/베라.jpeg); border: 1px solid black; background-repeat: no-repeat;}
+        .bg1{background-size: contain;}
+        .bg2{background-size: cover;}
+        .bg3{background-size: 70px 70px;}
+        .bg4{background-size: 100% 100%;}
+</style>
+
+내용안에 이미지 위치
+<style>
+        body{background-color: rgb(164, 154, 138); color: rgb(11, 11, 11);}
+        div{background-image: url(img/거품.jpg);
+        border: 5px dotted black;
+        background-repeat: no-repeat;}
+        p{line-height: 1.5em;}
+        .bg1{background-position: center center;}
+        .bg2{background-position: right bottom;}
+        .bg3{background-position: 100px 100px;}
+        .bg4{background-position: 30% 20%;}
+</style>
+
+
+배경사진 위치
+background-position: center;
+
+전체 투명도
+opacity: 0.7; 
+
+내용 정렬
+text-align: center;
+
+그라데이션 배경
+background : linear-gradient(50deg, white, deeppink);}
+
+선형 그라데이션
+<style>
+div{width: 500px;
+height: 500px;
+background: linear-gradient(125deg, #F6F6F6, #CC723D 60%, red );}    
+</style>
+
+내부에서 커지는 그라데이션
+<style>
+        div{width: 500px;
+        height: 300px;
+        }
+        .a{background: radial-gradient(brown, white, black);}
+        .b{background: radial-gradient(circle, black,beige,yellow);}
+        .c{background: radial-gradient(red, blue, 80%, green);}
+        #d{width: 300px; height: 500px; background: radial-gradient(brown, yellow, white);}
+</style>
+
+
+일정부분 그라데이션
+<style>
+      div{width: 500px; height: 300px; 
+      background: radial-gradient(circle at 30% 30%, white, green);}
+</style>
+
+
+롤리팝 그라데이션
+<style>
+        div{width: 500px; height: 300px;
+        /* background: repeating-linear-gradient(brown, red 20px);} */
+        background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);}
+</style>
+
+
+
+
+RAYOUT
+
+
+컬러박스
+{width: 50px; height: 100px; background-color: skyblue;}
+
+이미지 아래로 정렬
+img{display: block; margin: 10px;}
+
+블릿기호없는 목록 우측정렬
+ul{list-style: none;}
+li{display: inline; margin-right: 50px;}
+
+글씨까지 배경색
+display: inline
+
+사이즈 지정한 배경색
+display: inline-block;
+
+테두리 종류
+{border-style: solid;}
+solid / dotted / dashed / groove
+
+액자 테두리
+<style>
+        div{width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin: 10px;
+        border-width: 20px;}
+
+        .box1{border-style: groove;}
+        .box2{border-style: inset;}
+        .box3{border-style: outset;}
+        .box4{border-style: ridge;}
+</style>
+
+일정부분 테두리 굵기
+{border-width: 2px;}
+{border-width: 5px 2px;}
+{border-width: 2px 5px 8px 10px;}
+{border-width: thin thick;}
+
+한면만 테두리 굵기 적용
+{border-top: 2px solid black;}
+{border-bottom: 2px solid black;}
+{border-left: 2px solid black;}
+{border-right: 2px solid black;}
+
+border-radius 테두리라운드
+값 1개= 4개 통일, 2개: 각 대각선마다
+{border-radius: 10px 20px 30px;}
+
+테두리 라운드 부분조정
+{border-top-left-radius: 30px 10px;}
+{border-top-left-radius: 40% 20%;}
+{border-radius: 50% 30%;}
+
+box-shadow 외곽그림자
+{border-top-left-radius: 40% 20%; 
+box-shadow: 2px -2px 5px 3px yellow;}
+
+margin 나를 기준으로 바깥 여백
+속성값 1개면 네방향 모두 적용
+속성값 2개면 첫번째값은 위아래, 두번째값은 좌우
+속성값 3개면 시계방향 적용
+{margin: 8%;}
+{margin-bottom: 50px; margin-left: 50px;}
+
+padding 안쪽여백
+{padding: 10px;}
+{padding: 10px 0 0;}
+{padding: 0 10px;}
+
+
+
+POSITION
+
+
+float 요소를 왼쪽이나 오른쪽에 떠있게함 (칸막이)
+.1{float: left; background-color: rgb(233, 189, 189);}
+.2{float: left; background-color: skyblue;}
+
+.3{float: right; background-color: rgb(121, 113, 118);}
+.4{float: right; background-color: rgb(189, 182, 182);}
+
+이미지 기준 텍스트 배치
+img{float: left; margin-right: 30px;}
+p{line-height: 2em;}
+div{float: right;}
+
+보더 내부 합치기
+border-collapse  (셀 2개일때 하나로 통일)
+
+셀 내부 테두리 분리
+border-spacing 
+
+empty-cell 빈 셀 
+(중간셀이 비어져있을때 밀림방지로 사용)
+ex .amp th, td{empty-cells:hide;}
+
+table-layout 
+셀 내용에 따라 셀너비 고정 or 변하게할지 지정
+
+word-break : break-all
+상자안으로 글자넣기
+
+verticla-align : 셀 내부 글자위치
+top / bottom 
+
+display가 들어가면 float은 중복이라 빼도됨
+
+border-collapse 보더 안쪽 합치기 (셀 2개일때 하나로 통일)
+border-spacing 셀이 분리되있을때 셀 테두리 분리
+empty-cell 내용이없는 빈셀
+중간셀이 비어져있을때 밀림방지로 empty-cells 사용
+ex .amp th, td{empty-cells:hide;}
+
+table-layout 
+셀 내용에 따라 셀너비를 고정or변하게할지 지정
+
+word-break : break-all
+상자안으로 글자넣기
+
+verticla-align : 셀 내부 글자위치
+top / bottom 
+
+외부문서 링크 삽입
+iframe src="네이버주소"
+
+배경화면 사이즈 꽉차게 
+background-size: cover
+
+이미지 가운데 정렬
+no-repeat center;
+
+
+
+선택자
+
+
+> : 자손선택자
++ : 형제 선택자 (첫번째 태그만 적용)
+~ : 형제 모두 다 (all 태그)
+^= "a" : a로 시작하는 파일 및 링크 
+$= "a" : a로 끝나는 파일 및 링크
+*= "a" : a가 포함되있는것 모두 다
+
+;link 방문하지않은 링크에 스타일 적용
+;visited 방문한링크에 스타일적용
+;active 웹 요소를 활성화했을때 스타일적용
+;hover 마우스커서를 올려놨을때 스타일적용
+;focus 웹요소에 초점이 맞춰졌을때 스타일적용
+
+클래스명 뒤에 한칸뛰어쓰기 : 하위요소 모두 다
+
+
+:enabled / :disabled 요소를 사용할수있을때와 없을때 스타일지정
+:checked 체크박스 항목 선택했을때 스타일지정
+
+div p:nth-child(3)
+div요소안에 3번째자식인 p에 스타일적용
+
+odd : 홀수자식 2n+1
+even : 짝수자식 2n
+
+:first-of-type : 형제들중 첫번째 요소에 적용
+:last-of-type : 형제들중 마지막 요소에 적용
+:target : 앵커 목적지에 적용
+
+
+
+transform
+
+트랜지션: 웹요소 스타일 속성이 조금씩 자연스럽게 바뀌는것
+
+transition-property 트랜지션 대상 설정 (all, none, 속성명 지정)
+transition-duration 진행시간 설정
+transition-delay 지연시간 설정
+
+transition-timing-function 속도 곡선 설정 
+속성 
+linear 같은속도 
+ease (기본값) 천천히 > 점점 빨라지다가 > 천천히 끝남
+ease-in 느리게 시작
+ease-out 느리게 끝남
+ease-in-out 느리게 시작하고 느리게 끝남
+
+@keyframes 애니메이션 변경지점 설정
+animation-delay 애니메이션 지연시간
+animation-direction 애니메이션 종료후 처음부터 시작할지, 역방향 진행할지

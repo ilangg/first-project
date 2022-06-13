@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{display: grid; grid-template-columns: 300px 300px 300px; grid-template-rows: 200px;}
+        /* grid-template 셀 크기지정 */
+        .item{background-color: thistle;}
+        .item:nth-child(odd){background-color: antiquewhite;}
+        /* 홀수칸 배경색 변경 */
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis molestie nibh, in rutrum erat venenatis id. Vivamus nisi mi, tincidunt ac magna et, aliquam congue nisl. Vestibulum gravida, nisl vel blandit imperdiet, augue ex iaculis dui, ut eleifend ante ante eget neque.</div>
+        <div class="item">Nullam pellentesque risus vel ex efficitur, nec convallis purus viverra.</div>
+        <div class="item">Etiam quis ipsum aliquam, ornare est sed, cursus mi. Nulla nec dui sit amet augue iaculis finibus vel ac orci. Curabitur ornare arcu sit amet consectetur placerat. </div>
+        <div class="item">Etiam quis ipsum aliquam, ornare est sed, cursus mi. Nulla nec dui sit amet augue iaculis finibus vel ac orci. </div>
+        <div class="item">Etiam quis ipsum aliquam, ornare est sed, cursus mi. Nulla nec dui sit amet augue iaculis finibus vel ac orci. Curabitur ornare arcu sit amet consectetur placerat. </div>
+        <div class="item">Etiam quis ipsum aliquam, ornare est sed, cursus mi. Nulla nec dui sit amet augue iaculis finibus vel ac orci. </div>
+    </div>
+</body>
+</html>
